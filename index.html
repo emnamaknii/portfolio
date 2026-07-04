@@ -1,97 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Nasreddine Cherni</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Emna Makni</title>
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.7;
     }
 
     header {
-      background: #0f172a;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 60px 20px;
+      padding: 40px 20px;
     }
 
-    header h1 {
-      font-size: 40px;
-      margin: 0;
+    .hero {
+      max-width: 900px;
     }
 
-    header p {
-      font-size: 20px;
-      color: #cbd5e1;
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
     }
 
-    nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
+    .hero h2 {
+      font-size: 24px;
+      color: #dbeafe;
+      margin-bottom: 20px;
     }
 
-    nav a {
-      margin: 0 15px;
-      color: #0f172a;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    h2 {
-      color: #0f172a;
-      border-bottom: 3px solid #2563eb;
-      display: inline-block;
-      padding-bottom: 8px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 20px;
-      margin: 6px;
-      font-size: 14px;
+    .hero p {
+      font-size: 18px;
+      color: #e5e7eb;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
+      background: white;
+      color: #1e3a8a;
+      padding: 13px 25px;
+      border-radius: 30px;
       text-decoration: none;
-      margin-top: 15px;
+      font-weight: bold;
+      margin: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      background: #dbeafe;
+    }
+
+    nav {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    nav a {
+      margin: 0 14px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #0f172a;
+    }
+
+    .section-title span {
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: #2563eb;
+      margin: 12px auto;
+      border-radius: 5px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1e3a8a;
+      padding: 9px 14px;
+      border-radius: 20px;
+      margin: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .timeline h3 {
+      color: #1e3a8a;
+      margin-bottom: 8px;
+    }
+
+    .date {
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 10px;
     }
 
     footer {
       background: #0f172a;
       color: white;
       text-align: center;
-      padding: 25px;
-      margin-top: 40px;
+      padding: 30px 15px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 7px;
+      }
     }
   </style>
 </head>
@@ -99,9 +179,16 @@
 <body>
 
   <header>
-    <h1>Nasreddine Cherni</h1>
-    <p>Développeur Full Stack | Mobile | Intelligence Artificielle</p>
-    <a href="#contact" class="btn">Me contacter</a>
+    <div class="hero">
+      <h1>Emna Makni</h1>
+      <h2>Développeuse Full Stack | Mobile | Systèmes Embarqués</h2>
+      <p>
+        Étudiante en Licence Technologies de l’Informatique, spécialité Systèmes Embarqués et Mobile,
+        passionnée par le développement mobile, les objets connectés et l’intelligence artificielle.
+      </p>
+      <a href="#projects" class="btn">Voir mes projets</a>
+      <a href="#contact" class="btn">Me contacter</a>
+    </div>
   </header>
 
   <nav>
@@ -109,91 +196,198 @@
     <a href="#skills">Compétences</a>
     <a href="#projects">Projets</a>
     <a href="#experience">Expérience</a>
+    <a href="#education">Formation</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
-    <h2>À propos</h2>
+    <div class="section-title">
+      <h2>À propos</h2>
+      <span></span>
+    </div>
+
     <div class="card">
       <p>
-        Je suis diplômé en Technologies de l'Informatique, spécialité Développement des Systèmes d'Information.
-        Passionné par le développement web, mobile et l'intelligence artificielle, j'aime créer des solutions modernes,
-        utiles et innovantes.
+        Je suis Emna Makni, étudiante en troisième année de Licence en Technologies de l’Informatique,
+        spécialité Systèmes Embarqués et Mobile à l’ISET Charguia.
+        Motivée, rigoureuse et dotée d’un bon esprit d’équipe, je souhaite contribuer à des projets innovants
+        dans le domaine du développement web, mobile, de l’IoT et de l’intelligence artificielle.
       </p>
     </div>
   </section>
 
   <section id="skills">
-    <h2>Compétences</h2>
-    <div class="card skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Angular</span>
-      <span>Node.js</span>
-      <span>Express.js</span>
-      <span>MongoDB</span>
-      <span>Flutter</span>
-      <span>Python</span>
-      <span>FastAPI</span>
-      <span>TensorFlow</span>
-      <span>GitHub</span>
+    <div class="section-title">
+      <h2>Compétences</h2>
+      <span></span>
+    </div>
+
+    <div class="card">
+      <span class="tag">Flutter</span>
+      <span class="tag">Dart</span>
+      <span class="tag">Angular</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Express.js</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">Oracle</span>
+      <span class="tag">Firebase</span>
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">OpenAI API</span>
+      <span class="tag">Arduino</span>
+      <span class="tag">Arduino IoT Cloud</span>
+      <span class="tag">MQTT</span>
+      <span class="tag">Proteus</span>
+      <span class="tag">ModelSim</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">Canva</span>
+      <span class="tag">StarUML</span>
+      <span class="tag">SolidWorks</span>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Projets</h2>
-
-    <div class="card">
-      <h3>SignVerify</h3>
-      <p>
-        Application intelligente de vérification de signatures bancaires avec IA.
-        Le système permet de scanner des documents, extraire les signatures et comparer automatiquement
-        avec des signatures de référence.
-      </p>
-      <p><strong>Technologies :</strong> Angular, Flutter, Node.js, MongoDB, FastAPI, TensorFlow</p>
+    <div class="section-title">
+      <h2>Projets</h2>
+      <span></span>
     </div>
 
-    <div class="card">
-      <h3>Smart Presence RealTime</h3>
-      <p>
-        Solution intelligente de gestion de présence destinée aux établissements scolaires,
-        basée sur l'automatisation du suivi des présences en temps réel.
-      </p>
-      <p><strong>Technologies :</strong> Web, Base de données, Système embarqué</p>
+    <div class="grid">
+      <div class="card">
+        <h3>SignVerify</h3>
+        <p>
+          Solution intelligente de vérification de signatures bancaires permettant d’automatiser le traitement,
+          l’extraction, la détection et la comparaison de signatures sur des documents scannés.
+        </p>
+        <p><strong>Technologies :</strong> Angular, Node.js, Express.js, MongoDB, Flutter, Python, Firebase, Cloudinary</p>
+      </div>
+
+      <div class="card">
+        <h3>Smart Presence</h3>
+        <p>
+          Système de pointage intelligent par empreinte digitale destiné aux établissements scolaires,
+          avec application mobile Flutter et base de données Firebase pour le suivi des absences.
+        </p>
+        <p><strong>Technologies :</strong> Flutter, Dart, Arduino, Firebase, Android, UML, EmailJS</p>
+      </div>
+
+      <div class="card">
+        <h3>Transport Interne Connecté</h3>
+        <p>
+          Projet réalisé durant le stage de perfectionnement : développement d’un système embarqué et d’une
+          application mobile pour connecter chauffeurs et personnel.
+        </p>
+        <p><strong>Domaine :</strong> Systèmes embarqués, Mobile, IoT</p>
+      </div>
     </div>
   </section>
 
   <section id="experience">
-    <h2>Expérience</h2>
+    <div class="section-title">
+      <h2>Expérience</h2>
+      <span></span>
+    </div>
 
-    <div class="card">
+    <div class="card timeline">
       <h3>Stage PFE - BIAT IT</h3>
+      <p class="date">Février 2026</p>
       <p>
-        Développement d'une plateforme intelligente de vérification de signatures dans un contexte bancaire.
+        Développement Full Stack & IA d’une plateforme intelligente de vérification de signatures bancaires.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Stage - ATB</h3>
+    <div class="card timeline">
+      <h3>Stage de Perfectionnement - Tunisair Technics</h3>
+      <p class="date">Janvier 2025</p>
       <p>
-        Découverte du monde professionnel, maintenance informatique, réseau et développement.
+        Réalisation d’un projet de système embarqué et application mobile pour automatiser le transport interne.
+      </p>
+    </div>
+
+    <div class="card timeline">
+      <h3>Stage d’initiation - Topnet</h3>
+      <p class="date">Janvier 2024</p>
+      <p>
+        Maintenance informatique et développement de site web.
+      </p>
+    </div>
+
+    <div class="card timeline">
+      <h3>Stage en Banque - UBCI Leasing</h3>
+      <p class="date">Octobre 2023</p>
+      <p>
+        Gestion de situations complexes et utilisation de logiciels bancaires.
       </p>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
+  <section id="education">
+    <div class="section-title">
+      <h2>Formation & Certificats</h2>
+      <span></span>
+    </div>
+
     <div class="card">
-      <p><strong>Email :</strong> nasro.cherni1919@gmail.com</p>
-      <p><strong>Téléphone :</strong> 90346490</p>
-      <p><strong>LinkedIn :</strong> ajoute ici ton lien LinkedIn</p>
+      <h3>Licence en Technologies de l’Informatique</h3>
+      <p>Spécialité : Systèmes Embarqués et Mobile</p>
+      <p>ISET Charguia | 2023 - 2026</p>
+    </div>
+
+    <div class="card">
+      <h3>Baccalauréat en Économie et Gestion</h3>
+      <p>Lycée Khayreddine Becha | 2023</p>
+    </div>
+
+    <div class="card">
+      <h3>Certificat</h3>
+      <p>Formation Initiation Web HTML, CSS, JavaScript - Crococoder, 32h</p>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="section-title">
+      <h2>Engagement & Langues</h2>
+      <span></span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Engagement Associatif</h3>
+        <p>Membre du Club Enactus : projets en groupe et montage vidéo.</p>
+        <p>Membre du Google Club : ateliers de développement web et technologies modernes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Langues</h3>
+        <p>Arabe : langue maternelle</p>
+        <p>Français : intermédiaire</p>
+        <p>Anglais : intermédiaire</p>
+      </div>
+
+      <div class="card">
+        <h3>Intérêts</h3>
+        <p>Sport</p>
+        <p>Petit business : création et vente de chocolats faits maison</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <span></span>
+    </div>
+
+    <div class="card contact-info">
+      <p><strong>Email :</strong> maaknii.emnaa@gmail.com</p>
+      <p><strong>Téléphone :</strong> +216 50729051</p>
+      <p><strong>LinkedIn :</strong> Emna Makni</p>
       <p><strong>GitHub :</strong> ajoute ici ton lien GitHub</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Nasreddine Cherni - Portfolio</p>
+    <p>© 2026 Emna Makni | Portfolio personnel</p>
   </footer>
 
 </body>
